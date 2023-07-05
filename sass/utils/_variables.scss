@@ -1,0 +1,18 @@
+//buttons colors
+
+$colors: (
+    'button-default':#F8D24E,
+    'button-hover-bg':#0A8817,
+    'button-focus-txt':#FCFCFC,
+    'button-disable':#ABABAB,
+    'button-txt-primary':#000000,
+    'button-txt-secondary':#131313,
+
+
+);
+
+@function getColor($key) {
+    @return map-get($colors, $key);
+  }
+
+//globals

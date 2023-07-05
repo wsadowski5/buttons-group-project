@@ -1,0 +1,47 @@
+@use "../utils/variables"as *;
+
+body{
+    cursor: url("/buttons-local/image/cursor.png"),auto;
+}
+
+.modal{
+    width: 300px;
+    height: 500px;
+    background-color: yellow;
+}
+
+.is-hidden{
+    pointer-events: none;
+    visibility: hidden;
+    opacity: 0;
+    scale: 0;
+}
+
+.button-products{
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    min-width: 108px;
+    height: 38px;
+    font-size: 12px;
+    border: 2px solid getColor('button-default');
+    border-radius: 8px;
+    background: none;
+    @media screen and (min-width: 1200px){
+        min-width: 134px;
+        font-size: 14px;
+        border-radius: 10px;
+    }
+    &:hover{
+        border-color: getColor('button-hover-bg');
+    }
+    &:focus{
+        border-color: getColor('button-hover-bg');
+        color: getColor('button-focus-txt');
+    }
+    &--disabled{
+        @extend .button-products;
+        color: getColor('button-txt-primary');
+        border-color: getColor('button-disable');
+        }
+    }  
+
